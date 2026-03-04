@@ -13,7 +13,7 @@ Kunci yang dihasilkan:
 - **Public Key** $(e, n)$ → digunakan untuk proses enkripsi
 - **Private Key** $(d, n)$ → digunakan untuk proses dekripsi
 
-[![Video Demo Program]] (https://youtu.be/uzoNNzQjEH0?si=9fWR6LGn25dKgrKr)
+[![Video Demo Program]] ((https://youtu.be/uzoNNzQjEH0?si=9fWR6LGn25dKgrKr))
 
 ---
 
