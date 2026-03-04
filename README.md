@@ -15,14 +15,11 @@ Kunci yang dihasilkan:
 
 ## Video Demonstrasi
 
-[![Video Demo Program](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/VIDEO_ID)
+[![Video Demo Program](https://img.youtube.com/vi/VIDEO_ID/0.jpg)]([https://youtu.be/VIDEO_ID](https://youtu.be/uzoNNzQjEH0?si=9fWR6LGn25dKgrKr))
 
 ---
 
 ## 2. Alur Program
-
-Alur kerja program secara umum:
-
 1. Program menentukan dua bilangan prima $p$ dan $q$.
 2. Program menghitung:
    - $n = p \times q$
@@ -42,8 +39,6 @@ Alur kerja program secara umum:
 ---
 
 ## 3. Cara Menjalankan Program
-
-### a. Kompilasi Program
 Pastikan compiler C++ (`g++`) sudah terpasang di sistem kamu, kemudian jalankan perintah berikut di terminal:
 
 ```bash
