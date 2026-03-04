@@ -52,16 +52,20 @@ Dekripsi  : m = c^d mod n
 long long modExp(long long base, long long exp, long long mod) {
     long long result = 1;
     base = base % mod;
+
     while (exp > 0) {
         if (exp % 2 == 1)
             result = (result * base) % mod;
+
         base = (base * base) % mod;
         exp = exp / 2;
     }
+
     return result;
 }
 
 int main() {
+
     // p dan q = bilangan prima
     long long p = 23;
     long long q = 17;
@@ -84,24 +88,23 @@ int main() {
 
     // cek gcd(e, φ(n)) = 1
     if (gcd(e, phi_n) != 1) {
-        cout << "Nilai e tidak relatif prima dengan phi(n)\n";
+        cout << "Nilai e tidak relatif prima dengan phi(n)" << endl;
         return 0;
     }
 
     // mencari d (eksponen privat)
     long long d = modInverse(e, phi_n);
 
-    cout << "\nPublic Key  (e,n) : (" << e << "," << n << ")";
-    cout << "\nPrivate Key (d,n) : (" << d << "," << n << ")\n";
+    cout << "\nPublic Key  (e,n) : (" << e << "," << n << ")" << endl;
+    cout << "Private Key (d,n) : (" << d << "," << n << ")" << endl;
 
     cin.ignore();
 
     while (true) {
-
-        cout << "1. Enkripsi\n";
-        cout << "2. Dekripsi\n";
-        cout << "3. Keluar\n";
-        cout << "Pilih :";
+        cout << "1. Enkripsi" << endl;
+        cout << "2. Dekripsi" << endl;
+        cout << "3. Keluar" << endl;
+        cout << "Pilih: ";
 
         int menu;
         cin >> menu;
@@ -113,16 +116,20 @@ int main() {
             cout << "\nMasukkan plaintext: ";
             getline(cin, plaintext);
 
-            cout << "\nCiphertext:\n";
+            cout << "\nCiphertext:" << endl;
+
             for (int i = 0; i < plaintext.length(); i++) {
                 long long m = (int)plaintext[i];
                 long long c = modExp(m, e, n);
+
                 cout << c << " ";
             }
 
+            cout << endl;
         }
 
         else if (menu == 2) {
+
             string input;
             long long cipher[100];
             int index = 0;
@@ -131,6 +138,7 @@ int main() {
             getline(cin, input);
 
             long long angka = 0;
+
             for (int i = 0; i <= input.length(); i++) {
                 if (input[i] == ' ' || input[i] == '\0') {
                     cipher[index++] = angka;
@@ -141,17 +149,20 @@ int main() {
                 }
             }
 
-            cout << "\nHasil Dekripsi:\n";
+            cout << "\nHasil Dekripsi:" << endl;
+
             for (int i = 0; i < index; i++) {
                 long long m = modExp(cipher[i], d, n);
-
                 cout << (char)m;
             }
+
             cout << endl;
         }
+
         else if (menu == 3) {
             break;
         }
     }
+
     return 0;
 }
