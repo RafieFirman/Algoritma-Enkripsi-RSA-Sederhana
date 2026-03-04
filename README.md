@@ -13,6 +13,10 @@ Kunci yang dihasilkan:
 - **Public Key** $(e, n)$ → digunakan untuk proses enkripsi
 - **Private Key** $(d, n)$ → digunakan untuk proses dekripsi
 
+## Video Demonstrasi
+
+[![Video Demo Program](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/VIDEO_ID)
+
 ---
 
 ## 2. Alur Program
@@ -44,3 +48,15 @@ Pastikan compiler C++ (`g++`) sudah terpasang di sistem kamu, kemudian jalankan 
 
 ```bash
 g++ rsa.cpp -o rsa
+rsa.exe
+
+contoh hasil run:
+Masukkan nilai eksponen publik (e): 7
+Public Key  (e, n) : (7, 391)
+Private Key (d, n) : (151, 391)
+
+Pilih menu: 1
+Masukkan plaintext: .....
+
+Pilih menu: 2
+Masukkan ciphertext: [masukkan deretan angka dari hasil enkripsi]
